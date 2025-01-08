@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ultimate Calculator</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Include Plotly for graphing functionality -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
+
 <body>
     <div id="calculator">
-        <!-- Header -->
+        <!-- Header with theme toggle button -->
         <div id="calculator-header">
             <h1>Ultimate Calculator</h1>
             <button id="theme-toggle">Switch Theme</button>
+            <button id="voice-command" onclick="startVoiceCommand()">🎤 Voice Command</button>
         </div>
-        
+
         <!-- Calculator Display -->
         <div id="display">
-            <textarea id="display-input" readonly></textarea>
+            <textarea id="display-input" readonly placeholder="Enter your calculation..."></textarea>
         </div>
 
         <!-- Calculator Keys -->
@@ -43,13 +48,22 @@
 
             <button class="key" onclick="calculate()">=</button>
         </div>
-        
-        <!-- Additional Features: Graphing, Statistics, etc. -->
-        <div id="graphing-tools">
-            <button onclick="showGraph()">Graph Function</button>
+
+        <!-- Unit Conversion Section -->
+        <div id="unit-conversion">
+            <button class="key" onclick="convertUnits()">Unit Conversion</button>
         </div>
+
+        <!-- Graphing Section (using Plotly) -->
+        <div id="graphing-tools">
+            <button class="key" onclick="showGraph()">Graph Function</button>
+        </div>
+
+        <!-- Graph Container (for displaying graphs) -->
+        <div id="graph-container" style="width: 100%; height: 400px;"></div>
     </div>
 
     <script src="scripts.js"></script>
 </body>
+
 </html>

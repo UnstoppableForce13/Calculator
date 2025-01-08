@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="calculator">
+        <!-- Header -->
+        <div id="calculator-header">
+            <h1>Ultimate Calculator</h1>
+            <button id="theme-toggle">Switch Theme</button>
+        </div>
+        
+        <!-- Calculator Display -->
+        <div id="display">
+            <textarea id="display-input" readonly></textarea>
+        </div>
+
+        <!-- Calculator Keys -->
+        <div id="keys">
+            <button class="key" onclick="appendValue(7)">7</button>
+            <button class="key" onclick="appendValue(8)">8</button>
+            <button class="key" onclick="appendValue(9)">9</button>
+            <button class="key" onclick="appendValue('/')">/</button>
+
+            <button class="key" onclick="appendValue(4)">4</button>
+            <button class="key" onclick="appendValue(5)">5</button>
+            <button class="key" onclick="appendValue(6)">6</button>
+            <button class="key" onclick="appendValue('*')">*</button>
+
+            <button class="key" onclick="appendValue(1)">1</button>
+            <button class="key" onclick="appendValue(2)">2</button>
+            <button class="key" onclick="appendValue(3)">3</button>
+            <button class="key" onclick="appendValue('-')">-</button>
+
+            <button class="key" onclick="appendValue(0)">0</button>
+            <button class="key" onclick="appendValue('.')">.</button>
+            <button class="key" onclick="clearDisplay()">C</button>
+            <button class="key" onclick="appendValue('+')">+</button>
+
+            <button class="key" onclick="calculate()">=</button>
+        </div>
+        
+        <!-- Additional Features: Graphing, Statistics, etc. -->
+        <div id="graphing-tools">
+            <button onclick="showGraph()">Graph Function</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

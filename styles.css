@@ -1,0 +1,201 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+#calculator {
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Header with theme toggle and voice command */
+#calculator-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#calculator-header h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+#calculator-header button {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#calculator-header button:hover {
+    background-color: #45a049;
+}
+
+/* Input Display */
+#display {
+    margin-bottom: 20px;
+}
+
+#display-input {
+    width: 100%;
+    height: 60px;
+    font-size: 1.5rem;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    background-color: #f5f5f5;
+    text-align: right;
+    color: #333;
+    outline: none;
+}
+
+#display-input:focus {
+    border-color: #4CAF50;
+    background-color: #fff;
+}
+
+/* Calculator Keypad */
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.key {
+    padding: 20px;
+    font-size: 1.2rem;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.key:hover {
+    background-color: #ddd;
+}
+
+.key:active {
+    background-color: #ccc;
+}
+
+/* Graphing & Unit Conversion Section */
+#graphing-tools,
+#unit-conversion {
+    margin-top: 20px;
+}
+
+#graphing-tools button,
+#unit-conversion button {
+    padding: 10px;
+    font-size: 1.2rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+#graphing-tools button:hover,
+#unit-conversion button:hover {
+    background-color: #0056b3;
+}
+
+#graph-container {
+    margin-top: 20px;
+    width: 100%;
+    height: 300px;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    #calculator {
+        width: 100%;
+        padding: 15px;
+    }
+
+    #calculator-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #calculator-header h1 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .key {
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    #display-input {
+        font-size: 1.2rem;
+    }
+
+    #graphing-tools button,
+    #unit-conversion button {
+        font-size: 1rem;
+    }
+}
+
+/* Theme-specific Styles */
+body.dark-mode #keys .key {
+    background-color: #333;
+    color: white;
+}
+
+body.dark-mode #keys .key:hover {
+    background-color: #444;
+}
+
+body.dark-mode #keys .key:active {
+    background-color: #555;
+}
+
+body.dark-mode #display-input {
+    background-color: #333;
+    color: white;
+}
+
+body.dark-mode #graphing-tools button,
+body.dark-mode #unit-conversion button {
+    background-color: #007bff;
+}
+
+body.dark-mode #graphing-tools button:hover,
+body.dark-mode #unit-conversion button:hover {
+    background-color: #0056b3;
+}
